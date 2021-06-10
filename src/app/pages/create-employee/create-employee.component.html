@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="title"> create product</span>
+                   <form class="mt-3 row g-2" [formGroup]="groupEmployees" (ngSubmit)="onSubmit()">
+                       <div class="mb-3">                      
+                           <input type="text" class="form-control form-control-lg" placeholder="user" formControlName="users">
+                           <div class="alert alert-danger" *ngIf="groupEmployees.controls.users.touched && groupEmployees.controls.users.invalid">
+                               <span >the product is required</span>
+                           </div>
+                       </div>
+                       <div class="mb-3">                       
+                           <input type="text" class="form-control form-control-lg" placeholder="name" formControlName="name">
+                           <div class="alert alert-danger" *ngIf="groupEmployees.controls.name.touched && groupEmployees.controls.name.invalid">
+                                <span >the last name is required</span>
+                            </div>
+                        </div>
+                       <div class="mb-3">                       
+                           <input type="text" class="form-control form-control-lg" placeholder="email" formControlName="email">
+                           <div class="alert alert-danger"*ngIf="groupEmployees.controls.email.touched && groupEmployees.controls.email.invalid">
+                                <span>the emial is required</span>
+                            </div>    
+                        </div>
+                       <div class="mb-3">                       
+                           <input type="password" class="form-control form-control-lg" placeholder="password" formControlName="password">
+                           <div class="alert alert-danger" *ngIf="groupEmployees.controls.password.touched && groupEmployees.controls.password.invalid">
+                                <span>the password is required</span>
+                            </div>
+                        </div>
+                       <div class="mb-3">                       
+                           <input type="password" class="form-control form-control-lg" formControlName="confirmPassword" placeholder="repeat password">
+                           <div class="alert alert-danger"  *ngIf="groupEmployees.controls.confirmPassword.touched && groupEmployees.controls.confirmPassword.invalid">
+                                <span>the password aren't the same </span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="" class="btn btn-secondary btn-lg float-start">back</button>
+                            <button type="submit" class="btn btn-success btn-lg float-end">save</button>
+                        </div>
+                    </form>          
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

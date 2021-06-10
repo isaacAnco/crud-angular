@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+                <div class="card-body text-center">
+                    <span class="title">list employees</span>
+                    <button class="btn btn-outline-secondary float-end" routerLink="create">new</button>
+                    <table class="table table-borderless" >
+                        <thead>
+                          <tr>
+                            <th scope="col">user</th>
+                            <th scope="col">name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">password</th>
+                          </tr>
+                        </thead>
+                        <tbody >
+                          <tr *ngFor="let item of [0, 1, 2]" class="">
+                            <td>danie233</td>
+                            <td>daniel ortiz</td>
+                            <td>daniel@gmail.com</td>
+                            <td>
+                                <i class="far fa-edit text-primary" (click)="onEdit()"></i>
+                                <i class="far fa-trash-alt text-danger" (click)="onDelete()"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+        </div>
+    </div>
+</div>
